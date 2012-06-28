@@ -1,7 +1,7 @@
 /*
 graphlog is a tool for visualizing the log of a poker game.
 
-graphlog uses gnuplot[1] to generate an interactive graph displaying the scores of
+graphlog uses [gnuplot][1] to generate an interactive graph displaying the scores of
 each player over the course of the log. graphlog assumes that the entries in the
 log represent consective hands and numbers them automatically.
 
