@@ -1,11 +1,13 @@
 /*
-graphlog is a tool for visualizing the log of a poker game.
+poker-graph is a tool for visualizing the log of a poker game.
 
-graphlog uses [gnuplot][1] to generate an interactive graph displaying the scores of
-each player over the course of the log. graphlog assumes that the entries in the
-log represent consective hands and numbers them automatically.
+poker-graph uses [gnuplot][1] to generate an interactive graph displaying the
+scores of each player over the course of all the hands in an [ACPC log][2].
+poker-graph assumes that the entries in the log represent consective hands and
+numbers them automatically.
 
 [1]: http://www.gnuplot.info/
+[2]: http://www.computerpokercompetition.org/index.php?option=com_rokdownloads&view=folder&Itemid=57
 
 Usage:
 
