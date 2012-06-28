@@ -86,10 +86,12 @@ func graphData() error {
 	cmd += `set yl "Score [SB]";`
 	cmd += fmt.Sprintf(`set title "%s";`, os.Args[1])
 	cmd += "p "
-	for i, p := range index[:len(index)-1] {
-		cmd += fmt.Sprintf(`"%s" u 1:%d title "%s" w l, `, tmp.Name(), i+2, p)
+	for i, p := range index {
+		if i != 0 {
+			cmd += ", "
+		}
+		cmd += fmt.Sprintf(`"%s" u 1:%d title "%s" w l`, tmp.Name(), i+2, p)
 	}
-	cmd += fmt.Sprintf(`"" u 1:%d title "%s" w l`, len(index)+1, index[len(index)-1])
 	fmt.Fprintln(gpipe, cmd)
 	fmt.Println("Press _Enter_ to quit.")
 
